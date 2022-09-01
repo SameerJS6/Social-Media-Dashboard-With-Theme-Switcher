@@ -152,6 +152,7 @@ body{
 }
 .container{
     width: 90%;
+    max-width: 90rem;
     margin-block: 2rem;
 }
 /* Heading  */
