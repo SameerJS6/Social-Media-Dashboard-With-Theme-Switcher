@@ -327,7 +327,22 @@ body{
     border-radius: 0.6rem;
     transition: var(--transition-delay);
 }
-
+@media (max-width: 425px) {
+    .media:nth-child(3)::after {
+        left: 1px;
+        right: 1px;
+    }
+}
+@media (min-width: 1024px) {
+    .media:nth-child(3)::after {
+        left: 1px;
+    }
+}
+@media (min-width: 1444px) {
+    .media:nth-child(3)::after {
+        left: 0px;
+    }
+}
 /* Report Grid  */
 h2[data-type = first] {
     font-size: var(--fs-600);
