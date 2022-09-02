@@ -4,7 +4,9 @@
     --clr-bg: hsl(0,0%, 100%);   /*(BG)*/
     --clr-secondary-400:  hsl(225, 100%, 98%);    /*(Top BG Pattern)*/
     --clr-primary-400:  hsl(227, 47%, 96%); /*(Card BG)*/
+    --clr-primary-500:  hsl(227, 47%, 86%); /*(Card BG)*/
     --clr-text-400: hsl(228, 12%, 44%);    /*(Text)*/
+    --clr-text-450: hsl(228, 12%, 44%);    /*(Overview Text Hover Only)*/
     --clr-text-500: hsl(230, 17%, 14%);    /*(Dark Blue Text)*/
 
     --clr-lime: hsl(163, 72%, 41%);
@@ -34,7 +36,7 @@
     --fw-800: 800;
     --fw-900: 900;
 
-    --transition-delay: all 1s linear;
+    --transition-delay: all 1s ease;
 } 
 /* For Dark Mode Toggle Class  */
 .darkMode{
@@ -42,7 +44,9 @@
     --clr-bg: hsl(230, 17%, 14%);   /*(BG)*/
     --clr-secondary-400:  hsl(232, 19%, 15%);    /*(Top BG Pattern)*/
     --clr-primary-400:  hsl(228, 28%, 20%); /*(Card BG)*/
+    --clr-primary-500:  hsl(228, 28%, 30%); /*(Card BG)*/
     --clr-text-400: hsl(228, 34%, 66%);    /*(Text)*/
+    --clr-text-450: hsl(0, 0%, 100%);    /*(Overview Text Hover Only)*/
     --clr-text-500: hsl(0, 0%, 100%);    /*(Dark Blue Text)*/
 
     --clr-btn: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));      /* (Button Toggle) */
@@ -252,6 +256,11 @@ body{
     background-color: var(--clr-primary-400);
     transition: var(--transition-delay);
 }
+.media:hover, .report:hover {
+    transition: all .4s ease;
+    cursor: pointer;
+    background-color: var(--clr-primary-500);
+}
 .media h1{
     color: var(--clr-text-500);
     font-weight: var(--fw-800);
@@ -294,7 +303,7 @@ body{
 /* Report Grid  */
 h2[data-type = first] {
     font-size: var(--fs-600);
-    color: var(--clr-text-400);
+    color: var(--clr-text-450);
 }
 .report-grid {
     display: grid;
