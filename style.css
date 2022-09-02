@@ -4,7 +4,7 @@
     --clr-bg: hsl(0,0%, 100%);   /*(BG)*/
     --clr-secondary-400:  hsl(225, 100%, 98%);    /*(Top BG Pattern)*/
     --clr-primary-400:  hsl(227, 47%, 96%); /*(Card BG)*/
-    --clr-primary-500:  hsl(227, 47%, 86%); /*(Card BG)*/
+    --clr-primary-500:  hsl(227, 47%, 92%); /*(Hover Card BG Only)*/
     --clr-text-400: hsl(228, 12%, 44%);    /*(Text)*/
     --clr-text-450: hsl(228, 12%, 44%);    /*(Overview Text Hover Only)*/
     --clr-text-500: hsl(230, 17%, 14%);    /*(Dark Blue Text)*/
@@ -44,7 +44,7 @@
     --clr-bg: hsl(230, 17%, 14%);   /*(BG)*/
     --clr-secondary-400:  hsl(232, 19%, 15%);    /*(Top BG Pattern)*/
     --clr-primary-400:  hsl(228, 28%, 20%); /*(Card BG)*/
-    --clr-primary-500:  hsl(228, 28%, 30%); /*(Card BG)*/
+    --clr-primary-500:  hsl(228, 28%, 25%); /*(Hover Card BG Only)*/
     --clr-text-400: hsl(228, 34%, 66%);    /*(Text)*/
     --clr-text-450: hsl(0, 0%, 100%);    /*(Overview Text Hover Only)*/
     --clr-text-500: hsl(0, 0%, 100%);    /*(Dark Blue Text)*/
@@ -161,6 +161,18 @@ body{
     max-width: 90rem;
     margin-block: 2rem;
 }
+/* Background Pattern  */
+.bg-pattern{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 15rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    transition: var(--transition-delay);
+    background-color: var(--clr-secondary-400);
+}
 /* Heading  */
 .heading h2{
     font-weight: var(--fw-700);
@@ -249,9 +261,9 @@ body{
 .media{
     text-align: center;
     padding: 1rem;
-    border-width: 2px;
+    /* border-width: 2px; */
+    /* border-image-slice: 1; */
     border-top: 4px solid;
-    border-image-slice: 1;
     border-radius: .6rem;
     background-color: var(--clr-primary-400);
     transition: var(--transition-delay);
@@ -284,15 +296,12 @@ body{
     font-size: var(--fs-200);
     color: var(--clr-text-500);
 }
+/* All the Borders */
 .blue-border{
     border-color: var(--clr-facebook);
 }
 .blue-1-border{
     border-color: var(--clr-twitter);
-}
-.insta-border{
-    border-radius: 0.6rem;
-    border-image-source: var(--clr-insta);
 }
 .red-border{
     border-color: var(--clr-youtube);
@@ -300,6 +309,25 @@ body{
 .report{
     background-color: var(--clr-primary-400);
 }
+/* Instagram Border */
+.media:nth-child(3){
+    position: relative;
+    border-top: 0.5px solid transparent;
+    border-radius: 0.6rem;
+    top: 3px;
+}
+.media:nth-child(3)::after{
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: 5px;
+    left: 0px; right: 0px;
+    background: var(--clr-insta);
+    z-index: -1;
+    border-radius: 0.6rem;
+    transition: var(--transition-delay);
+}
+
 /* Report Grid  */
 h2[data-type = first] {
     font-size: var(--fs-600);
@@ -345,14 +373,16 @@ h2[data-type = first] {
 .attribution { 
     font-size: 11px; 
     text-align: center; 
-    color: var(--clr-text-400); 
+    color: var(--clr-text-450); 
     margin-bottom: 0.5rem;
+    font-weight: var(--fw-800);
 }
 .attribution a { 
     text-decoration: none;
     transition: all .5s ease;
-    color: var(--clr-text-400); 
+    color: var(--clr-text-450); 
+    font-weight: var(--fw-800);
 }
 .attribution a:is(:hover, :focus-within) {
-    color: var(--clr-text-500); 
+    color: var(--clr-twitter); 
 }
