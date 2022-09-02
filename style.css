@@ -170,6 +170,8 @@ body{
     width: 100%;
     height: 15rem;
     border-radius: 0 0 1.5rem 1.5rem;
+    animation: title-down-rev 2s ease;
+    animation-delay: 150ms;
     transition: var(--transition-delay);
     background-color: var(--clr-secondary-400);
 }
@@ -178,12 +180,15 @@ body{
     font-weight: var(--fw-700);
     font-size: var(--fs-500);
     color: var(--clr-text-500);
+    animation: title-left 2s ease;
 }
 .heading p{
     font-size: var(--fs-200);
     font-weight: var(--fw-700);
     color: var(--clr-text-400);
     padding-bottom: 1rem;
+    animation: title-left 2s ease;
+    animation-delay: 100ms;
 }
 /* Dark Mode  */
 .dark-btn{
@@ -197,6 +202,8 @@ body{
     color: var(--clr-text-400);
     font-weight: var(--fw-700);
     font-size: var(--fs-200);
+    animation: title-left1 1.5s ease;
+    animation-delay: 105ms;
 }
 /* Dark Mode Button  */
 .btn-bg{
@@ -207,6 +214,8 @@ body{
     padding: .1rem;
     width: 50px;
     height: 25px;
+    animation: title-right 2s ease;
+    animation-delay: 100ms;
 }
 
 .toggle-btn{
@@ -219,6 +228,8 @@ body{
     transform: translateX(0);
     transition: all 0.8s ease;
     background-color: var(--clr-secondary-400);
+    animation: opacity 2s ease;
+    animation-delay: 0.7s;
 }
 .shift-btn {
     transition: all .8s ease;
@@ -347,6 +358,8 @@ body{
 h2[data-type = first] {
     font-size: var(--fs-600);
     color: var(--clr-text-450);
+    animation: title-scale 1.5s ease;
+    animation-delay: 180ms;
 }
 .report-grid {
     display: grid;
